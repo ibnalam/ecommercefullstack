@@ -13,6 +13,6 @@ const registrationController = new Schema({
     }
 })
 
-
+  
 
 module.exports = mongoose.model("User",registrationController )

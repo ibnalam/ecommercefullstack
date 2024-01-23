@@ -26,22 +26,23 @@ let creatuserController = async (req, res)=>{
             reg.save()
 
 
+            console.log(reg)
 
-            //  nodemailer 
+            nodemailer 
             const transporter = nodemailer.createTransport({
                 service: "gmail",
                 auth: {
                   // TODO: replace `user` and `pass` values from <https://forwardemail.net>
                   user: "ibnalam6@gmail.com",
-                  pass: "REPLACE-WITH-YOUR-GENERATED-PASSWORD",
+                  pass: "fjdo yjnu eghr trgs",
                 },
               });
               const info = await transporter.sendMail({
-                from: '"Fred Foo 👻" <foo@example.com>', // sender address
-                to: "bar@example.com, baz@example.com", // list of receivers
-                subject: "Hello ✔", // Subject line
+                from: 'ibnalam6@gmail.com', // sender address
+                to: reg.email, // list of receivers
+                subject: "Varification email ", // Subject line
                 text: "Hello world?", // plain text body
-                html: "<b>Hello world?</b>", // html body
+                html: `<h1>Hello ${reg.username}</h1><p>welcome to our resourt</p><a href="https://www.facebook.com/"><img src="https://i.ibb.co/2gxqnqT/fb-icon-325x325.png" alt="fb-icon-325x325"></a>`, // html body
               });
               
 
@@ -64,6 +65,12 @@ let creatuserController = async (req, res)=>{
     // reg.save()
     // res.send({"success":"Registration successfully"})
 }
+
+
+
+
+
+
 
 
 

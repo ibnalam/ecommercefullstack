@@ -23,6 +23,7 @@ function App() {
 
 
   };
+  
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
@@ -72,6 +73,7 @@ function App() {
       >
       <Input />
     </Form.Item>
+
 
     <Form.Item
       label="Password"
